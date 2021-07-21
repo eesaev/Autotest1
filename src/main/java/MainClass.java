@@ -11,11 +11,11 @@ public class MainClass {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-        driver.get("https://www.selenium.dev/downloads/");
+        driver.get("http://htmlbook.ru/");
 
 
-        String verifiedLink = driver.findElement(By.xpath("//div[6]//p/a")).getAttribute("href");
-        String correctLink = "https://www.selenium.dev/maven";
+        String verifiedLink = driver.findElement(By.xpath("//aside//a")).getAttribute("href");
+        String correctLink = "http://htmlbook.ru/html";
 
 
         if (verifiedLink.equals(correctLink)) {
